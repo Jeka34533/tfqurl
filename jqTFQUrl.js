@@ -31,7 +31,7 @@
 		},
 
 		decodeFlashget : function(input) {
-			var uidIndex = input.lastIndexOf("&uid");
+			var uidIndex = input.indexOf("&");
 			var output = Base64.decode(input.substring(11, uidIndex == -1 ? input.length : uidIndex));
 			return output.substr(10, (output.length - 20));
 		},
